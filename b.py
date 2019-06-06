@@ -7,7 +7,7 @@ import psutil
 
 class ContainerCollect(object):
     def __init__(self):
-        self.client = docker.APIClient(base_url="10.1.51.70:2375")
+        self.client = docker.APIClient(base_url="unix://var/run/docker.sock")
         self.NumToLetter = {1: 'a', 2: 'b', 3:'c', 4:'d', 5:'e', 6:'f', 7:'g', 8:'h'}
 
     def GetNodeInfo(self):
